@@ -14,20 +14,17 @@ function color3()
 {
 document.body.style.backgroundColor="green";
 }
-function restore(x)
-{
-document.body.style.backgroundColor=x;
-}
 function box()
 {
 alert("PURCHASE CONFIRMED");
+document.body.style.backgroundColor="white";
 }
 function flash()
 {
 color1();
 setTimeout(color2,500);
 setTimeout(color3,1000);
-setTimeout(restore(X),1500);
+setTimeout(color1,1500);
 setTimeout(box,1501);
 }
 </script>
