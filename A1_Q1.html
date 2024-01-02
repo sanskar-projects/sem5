@@ -1,17 +1,9 @@
 <html>
 <body>
 <script>
-function red(x)
+function color(x)
 {
 document.body.style.backgroundColor=x;
-}
-function yellow()
-{
-document.body.style.backgroundColor="yellow";
-}
-function green()
-{
-document.body.style.backgroundColor="green";
 }
 function box()
 {
@@ -19,13 +11,13 @@ alert("PURCHASE CONFIRMED");
 }
 function flash()
 {
-setTimeout(red("red"),500);
-setTimeout(yellow,1000);
-setTimeout(green,1500);
+setTimeout(color("red"),500);
+setTimeout(color("yellow"),1000);
+setTimeout(color("green"),1500);
 setTimeout(box,2000)
 }
 </script>
-<br><br><br><br><br>
-<div align="center"><button onclick="flash();" style="width:50%; height:50%;">CLICK TO ORDER</button></div>
+<br><br><br><br><br><br><br><br><br><br>
+<div align="center"><button onclick="flash();" style="width:50%; height:75%;">CLICK TO ORDER</button></div>
 </body>
 </html>
