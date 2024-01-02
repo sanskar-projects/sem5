@@ -1,9 +1,9 @@
 <html>
 <body>
 <script>
-function red()
+function red(x)
 {
-document.body.style.backgroundColor="red";
+document.body.style.backgroundColor=x;
 }
 function yellow()
 {
@@ -19,7 +19,7 @@ alert("PURCHASE CONFIRMED");
 }
 function flash()
 {
-setTimeout(red,500);
+setTimeout("red",500);
 setTimeout(yellow,1000);
 setTimeout(green,1500);
 setTimeout(box,2000)
