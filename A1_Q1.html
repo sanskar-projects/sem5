@@ -1,18 +1,9 @@
 <html>
 <body>
 <script>
-function color(n)
+function color1()
 {
-let x;
-if(n==0)
-{x="white";}
-if(n==1)
-{x="red";}
-if(n==2)
-{x="yellow";}
-if(n==3)
-{x="green";}
-document.body.style.backgroundColor=x;
+document.body.style.backgroundColor="red";
 }
 function color2()
 {
@@ -24,16 +15,15 @@ document.body.style.backgroundColor="green";
 }
 function box()
 {
-alert("PURCHASE CONFIRMED");
 document.body.style.backgroundColor="white";
+alert("PURCHASE CONFIRMED");
 }
 function flash()
 {
-color(1);
-setTimeout(color(2),500);
-setTimeout(color(3),1000);
-setTimeout(color(0),1500);
-setTimeout(box,1501);
+color1();
+setTimeout(color2(),500);
+setTimeout(color3(),1000);
+setTimeout(box,1500);
 }
 </script>
 <br><br><br><br><br><br><br><br><br><br>
