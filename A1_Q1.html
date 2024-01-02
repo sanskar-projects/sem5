@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+function red()
+{
+document.body.style.backgroundColor="red";
+}
+function yellow()
+{
+document.body.style.backgroundColor="yellow";
+}
+function green()
+{
+document.body.style.backgroundColor="green";
+}
+function box()
+{
+alert("PURCHASE CONFIRMED");
+}
+function flash()
+{
+setTimeout(red,500);
+setTimeout(yellow,1000);
+setTimeout(green,1500);
+setTimeout(box,2000)
+}
+</script>
+<br><br><br><br><br>
+<div align="center"><button onclick="flash();" style="width:50%; height:50%;">CLICK TO ORDER</button></div>
+</body>
+</html>
