@@ -1,10 +1,12 @@
 <html>
 <body>
 <script>
-let X=document.body.style.Color;
-function color1()
+function color1(n)
 {
-document.body.style.backgroundColor="red";
+let x;
+if(n==1)
+{x="red"}
+document.body.style.backgroundColor=x;
 }
 function color2()
 {
@@ -21,7 +23,7 @@ document.body.style.backgroundColor="white";
 }
 function flash()
 {
-color1();
+color1(1);
 setTimeout(color2,500);
 setTimeout(color3,1000);
 setTimeout(color1,1500);
