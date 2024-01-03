@@ -14,21 +14,18 @@ function color3()
 {
 document.body.style.backgroundColor="green";
 }
-function restore(x)
-{
-document.body.style.backgroundColor=x;
-}
 function box()
 {
+document.body.style.backgroundColor="white";
 alert("PURCHASE CONFIRMED");
 }
 function flash()
 {
-setTimeout(function(){document.body.style.backgroundColor="red";},500);
-setTimeout(function(){document.body.style.backgroundColor="yellow";},1000);
-setTimeout(function(){document.body.style.backgroundColor="green";},1500);
-setTimeout(function(){document.body.style.backgroundColor="white";},2000);
-  setTimeout(function(){},2001);
+color1();
+setTimeout(color2,500);
+setTimeout(color3,1000);
+setTimeout(box,1500);
+  setTimeout(box,2000);
 
 }
 </script>
