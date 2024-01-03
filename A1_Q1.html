@@ -4,7 +4,7 @@
 let X=document.body.style.Color;
 function color1()
 {
-document.body.style.backgroundColor="red";
+
 }
 function color2()
 {
@@ -24,9 +24,9 @@ alert("PURCHASE CONFIRMED");
 }
 function flash()
 {
-setTimeout(color1,500);
-setTimeout(color2,1000);
-setTimeout(color3,1500);
+setTimeout(function(){document.body.style.backgroundColor="red";},500);
+setTimeout(function(){document.body.style.backgroundColor="red";},1000);
+setTimeout(function(){document.body.style.backgroundColor="red";},1500);
 setTimeout(box,2000);
 setTimeout(restore(X),2000);
 
