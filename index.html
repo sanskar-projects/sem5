@@ -3,10 +3,10 @@
 <script>
 var flag=true;
 var n=5;
+var text="";
+var color="";
 function BIG_SMALL()
 {
-var text;
-var color;
 if(n<5||n>50)
 {
 flag=!flag;
@@ -15,22 +15,23 @@ return;
 if(flag=="true")
 {
 n+=5;
-text="";
+text="HI";
 color="";
 }
 if(flag=="false")
 {
 n-=5;
-text="";
+text="BYE";
 color="";
 }
 document.getElementById("1").style.fontSize=n+"pt";
 document.getElementById("1").style.color=color;
+document.getElementById("1").innerHTML=text;
 }
 setInterval(BIG_SMALL,100);
 </script>
 </head>
 <body>
-<h1 id="1">HI</h1>
+<h1 id="1"></h1>
 </body>
 </html>
