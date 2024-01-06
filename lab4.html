@@ -1,1 +1,34 @@
-
+<html>
+<body>
+<script>
+var n=5;
+var flag=true;
+var s;
+var color;
+function big_small()
+{
+if(n<5||n>50)
+{
+flag=!flag;
+}
+if(flag==true)
+{
+n+=1;
+color="red";
+s="TEXT IS GROWING";
+}
+if(flag==false)
+{
+n-=1;
+color="blue";
+s="TEXT IS SHRINKING";
+}
+document.getElementById("1").style.fontSize=n+"pt";
+document.getElementById("1").innerHTML=s;
+document.getElementById("1").style.color=color; 
+}
+setInterval(big_small,100);
+</script>
+<p id="1"></p>
+</body>
+</html>
