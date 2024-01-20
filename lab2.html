@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Student Registration Form</title>
+</head>
+<body>
+<script>
+function validate()
+{
+var f=document.getElementById("fname");
+var l=document.getElementById("lname");
+var u=document.getElementById("usn");
+var s=document.getElementById("sem");
+var e=document.getElementById("email");
+var p=document.getElementById("phno");
+var a=document.getElementById("address");
+var r1=document.getElementById("g1");
+var r2=document.getElementById("g2");
+var c1=document.getElementById("ch1");
+var c2=document.getElementById("ch2");
+var c3=document.getElementById("ch3");
+var c4=document.getElementById("ch4");
+var b=document.getElementById("branch");
+var i=document.getElementById("image");
+
+var usn=/^[0-9][a-zA-Z]{2}[0-9]{2}[a-zA-Z]{2}[0-9]{3}$/;
+var sem=/^[1-8]$/;
+var email=/^[a-zA-Z0-9._]+@[a-zA-Z.]+$/;
+var phone=/^[0-9]{10}$/;
+
+if(f.value.length==0||l.value.length==0)
+{
+alert("enter name");
+return;
+}
+
+if(u.value.length==0)
+{
+alert("enter usn");
+return;
+}
+if(!u.value.match(usn))
+{
+alert("invalid usn");
+return;
+}
+
+if(s.value.length==0)
+{
+alert("enter semester");
+return;
+}
+if(!s.value.match(sem))
+{
+alert("invalid semester");
+return;
+}
+
+if(e.value.length==0)
+{
+alert("enter email");
+return;
+}
+if(!e.value.match(email))
+{
+alert("invalid email");
+return;
+}
+
+if(p.value.length==0)
+{
+alert("enter phone number");
+return;
+}
+if(!p.value.match(phone))
+{
+alert("invalid phone number");
+return;
+}
+
+if(a.value.length==0)
+{
+alert("enter address");
+return;
+}
+
+if(r1.checked==false&&r2.checked==false)
+{
+alert("select gender");
+return;
+}
+
+if(c1.checked==false&&c2.checked==false&&c3.checked==false&&c4.checked==false)
+{
+alert("select area of interest");
+return;
+}
+
+if(b.selectedIndex==false)
+{
+alert("select branch");
+return
+}
+
+if(i.value.length==0)
+{
+alert("upload photo");
+return;
+}
+
+alert("Student registration form submitted succesfully");
+}
+</script>
+
+<form action="">
+First name:<input type="text" id="fname"><br><br>
+
+Last name:<input type="text" id="lname"><br><br>
+
+USN:<input type="text" id="usn"><br><br>
+
+Semester:<input type="text" id="sem"><br><br>
+
+Email ID:<input type="email" id="email"><br><br>
+
+Phone no:<input type="tel" id="phno"><br><br>
+
+Address:<textarea id="address"></textarea><br><br>
+
+Gender:<br>
+
+Male<input type="radio" id="g1" name="g">
+
+Female<input type="radio" id="g2" name="g"><br><br>
+
+Area of Interest:<br>
+
+Big Data<input type="checkbox" id="ch1"><br>
+
+AI<input type="checkbox" id="ch2"><br>
+
+ML<input type="checkbox" id="ch3"><br>
+
+Robotics<input type="checkbox" id="ch4"><br><br>
+
+Branch:
+<select id="branch">
+<option>Select</option>
+<option>AE</option>
+<option>AS</option>
+<option>CS</option>
+<option>IS</option>
+</select><br><br>
+
+Upload image:<input type="file" id="image"><br><br>
+
+<input type="submit" id="submit" onclick="validate()" value="Submit the information">
+<input type="reset" id="reset" value="Reset the information">
+</form>
+</body>
+</html>
