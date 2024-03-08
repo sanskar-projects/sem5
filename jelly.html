@@ -8,12 +8,13 @@ $.ajax({
     headers: { 'X-Api-Key': 'dwZxzk+QqRLKPfEe1sQhGw==JT4gZNkZL8pX6yxn'},
     contentType: 'application/json',
     success: function(result) {
-        console.log(result);
+        document.getElementById("A").innerHTML=result;
     },
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
 });
     </script>
+<p id="A"></p>
   </body>
 </html>
