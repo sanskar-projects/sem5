@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <script>
+      var name = 'San Francisco'
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/city?name=' + name,
+    headers: { 'X-Api-Key': 'dwZxzk+QqRLKPfEe1sQhGw==JT4gZNkZL8pX6yxn'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
+    </script>
+  </body>
+</html>
