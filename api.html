@@ -2,27 +2,21 @@
 <body>
 <p id="title"></p>
 <br>
-<img src="" id="picture">
+<img src="" id="picture" style="height:50%; width:50%;">
 <script>
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const api_key = "cixz4I9UTkxdUVkiqdfzY3gitaatNfN7qcTu5WGy";
 
 const fetchNASAData = async () => {
-  try {
-    const response = await fetch(`${url}${api_key}`)
-    const data = await response.json()
-    console.log('NASA APOD data', data)
-    displayData(data)
-  } catch (error) {
-    console.log(error)
-  }
+    const response = await fetch(`${url}${api_key}`);
+    const data = await response.json();
+    displayData(data);
 }
-
 const displayData = data => {
-  document.getElementById('title').textContent = data.title
-  document.getElementById('date').textContent = data.date
-  document.getElementById('picture').src = data.hdurl
-  document.getElementById('explanation').textContent = data.explanation
+  document.getElementById('title').innerHTML = data.title;
+  document.getElementById('date').innerHTML = data.date;
+  document.getElementById('picture').src = data.hdurl;
+  document.getElementById('explanation').innerHTML = data.explanation;
 }
 
 fetchNASAData();
