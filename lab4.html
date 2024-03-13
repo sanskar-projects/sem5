@@ -30,5 +30,36 @@ document.getElementById("1").style.color=color;
 setInterval(big_small,100);
 </script>
 <p id="1"></p>
+<br>
+<p id="2"></p>
+<script>
+var nx=50;
+var flagx=true;
+var sx;
+var colorx;
+function big_smallx()
+{
+if(nx<5||nx>50)
+{
+flagx=!flagx;
+}
+if(flagx==true)
+{
+nx+=1;
+colorx="red";
+sx="TEXT IS GROWING";
+}
+if(flagx==false)
+{
+nx-=1;
+colorx="blue";
+sx="TEXT IS SHRINKING";
+}
+document.getElementById("2").style.fontSize=n+"pt";
+document.getElementById("2").innerHTML=s;
+document.getElementById("2").style.color=color; 
+}
+setInterval(big_smallx,100);
+</script>
 </body>
 </html>
