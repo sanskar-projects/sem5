@@ -10,8 +10,8 @@
 <br>
 <script>
 const url = 'https://api.nasa.gov/planetary/earth/assets?lon=100.75&lat=1.5&date=2014-02-01&dim=0.15&api_key='
-const api_key = "cixz4I9UTkxdUVkiqdfzY3gitaatNfN7qcTu5WGy";
-
+const api_key_ = "cixz4I9UTkxdUVkiqdfzY3gitaatNfN7qcTu5WGy";
+const api_key="DEMO_KEY";
 const fetchNASAData = async () => {
     const response = await fetch(`${url}${api_key}`);
     const data = await response.json();
