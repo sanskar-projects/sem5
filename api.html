@@ -17,7 +17,7 @@ const response = await fetch(`${url}${api_key}`);
 const data = await response.json();
 displayData(data);
 }
-const displayData = data => {
+function displayData(data) {
   document.getElementById('title').innerHTML = data.title;
   document.getElementById('date').innerHTML = data.date;
   document.getElementById('picture').src = data.photos[0].img_src;
